@@ -2,8 +2,8 @@ import React from 'react'
 
 const FrontPage = () => {
   return (
-    <div className='fp-bg p-5 pt-24 pl-10 pr-10'>
-        <div className='bg-transparent pt-52 md:pt-36 md:w-[520px] md:pl-12'>
+    <div className='fp-bg bg bg-dark p-5 pt-24 pl-10 pr-10'>
+        <div className='bg-transparent md:w-[520px] md:pl-12'>
             <h1 className='bg-inherit font-bold text-5xl'>
                 Lorem ipsum dolor sit amet consectetur.
             </h1>
