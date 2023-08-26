@@ -5,7 +5,7 @@ const Navbar = () => {
 
 
   return (
-    <div className="z-40 fixed p-4 flex justify-between bg-transparent md:bg-inherit items-center w-full md:justify-start md:gap-10 md:shadow-md">
+    <div className="z-40 fixed p-4 flex justify-between bg-not md:bg-inherit items-center w-full md:justify-start md:gap-10 md:shadow-md">
       <div className="logo bg-transparent">
         <img
           src="https://png.pngtree.com/png-vector/20220630/ourmid/pngtree-foxy-logo-template-animal-animals-png-image_5611651.png"

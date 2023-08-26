@@ -1,7 +1,9 @@
 import './App.css'
 import About from './components/About'
+import Footer from './components/Footer'
 import FrontPage from './components/FrontPage'
 import Navbar from './components/Navbar'
+import Services from './components/Services'
 
 function App() {
 
@@ -10,6 +12,8 @@ function App() {
       <Navbar/>
       <FrontPage/>
       <About/>
+      <Services/>
+      <Footer/>
     </>
   )
 }

@@ -5,6 +5,10 @@
     display: flex;
     align-items: center;
 }
+.bg-not{
+    background-color: rgba(0, 0, 0, 0.329);
+    backdrop-filter: blur(2px);
+}
 .bg-dark{
     position: relative;
     top: 0;
@@ -61,4 +65,20 @@
 }
 .bg-five{
     background-image: url('./assets/images/card-bg-five.jpg');
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.marq{
+    display: flex;
+    gap: 72px;
+    align-items: center;
+}
+.marq img{
+    min-height: 200px;
+    min-width: 200px;
 }
