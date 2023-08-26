@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import DashBoard from './pages/Dashboard.jsx'
+import ErrorPage from './pages/ErrorPage.jsx'
 import App from './App.jsx'
 import './index.css'
 
@@ -14,7 +15,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    // errorElement: <Error />
+    errorElement: <ErrorPage />
   },
   {
     path: "/dashboard",
