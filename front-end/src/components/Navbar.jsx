@@ -5,16 +5,16 @@ const Navbar = () => {
 
 
   return (
-    <div className="p-4 flex justify-between items-center relative md:justify-start md:gap-10 md:shadow-md">
-      <div className="logo">
+    <div className="z-40 fixed p-4 flex justify-between bg-transparent md:bg-inherit items-center w-full md:justify-start md:gap-10 md:shadow-md">
+      <div className="logo bg-transparent">
         <img
           src="https://png.pngtree.com/png-vector/20220630/ourmid/pngtree-foxy-logo-template-animal-animals-png-image_5611651.png"
           alt="logo"
-          className="w-12 h-12"
+          className="w-12 h-12 bg-transparent"
         />
       </div>
       <div className="navlinks flex items-center gap-12 md:w-full">
-        <div className={"burger z-50 md:hidden"} onClick={()=>setNavOpen(!navOpen)}>
+        <div className={"burger p-2 rounded-sm z-50 md:hidden"} onClick={()=>setNavOpen(!navOpen)}>
             <div className="line w-6 h-1 bg-slate-100 m-1"></div>
             <div className="line w-6 h-1 bg-slate-100 m-1"></div>
             <div className="line w-6 h-1 bg-slate-100 m-1"></div>
@@ -32,10 +32,10 @@ const Navbar = () => {
             </li>
           </ul>
           <div className="buttons flex gap-4 bg-inherit">
-            <button className="bg-gray-700 pl-4 pr-4 rounded-sm h-10 hover:bg-gray-800">
+            <button className="btn-secondary hover:bg-gray-800">
               Sign in
             </button>
-            <button className="bg-blue-400 pl-4 pr-4 rounded-sm h-10 hover:bg-blue-300">
+            <button className="btn-primary hover:bg-blue-300">
               Registration
             </button>
           </div>
