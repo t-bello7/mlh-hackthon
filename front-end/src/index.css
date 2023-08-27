@@ -7,4 +7,8 @@
     color: rgb(241, 237, 237);
     font-family: 'Poppins', sans-serif;
     transition: .3s all ease;
+    scroll-behavior: smooth;
+}
+body::-webkit-scrollbar{
+ width: 0;
 }

@@ -22,7 +22,7 @@ const Navbar = () => {
         <div className={navOpen? "h-fit p-5 shadow-md absolute top-0 left-0 w-full" : "hidden md:flex md:w-full md:justify-between"}>
           <ul className='h-fit md:flex md:gap-4'>
             <li className='mb-2 pt-2 pb-2 uppercase hover:text-slate-300' >
-              <a href="">About the company</a>
+              <a href='#About'>About the company</a>
             </li>
             <li className='mb-2 pt-2 pb-2 uppercase hover:text-slate-300'>
               <Link to={"/dashboard"}>Dashboard</Link>

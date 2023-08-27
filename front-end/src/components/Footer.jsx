@@ -57,13 +57,13 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="bg-inherit mb-2 md:m-0">
-                  <a href="#about" className="bg-inherit">
-                    about Us
+                  <a href="#About" className="bg-inherit">
+                    About Us
                   </a>
                 </li>
                 <li className="bg-inherit mb-4 md:m-0">
                   <a className="bg-inherit" href="#services">
-                    services
+                    Services
                   </a>
                 </li>
               </ul>
