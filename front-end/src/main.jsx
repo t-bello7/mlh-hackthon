@@ -1,20 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import DashBoard from './pages/Dashboard.jsx'
 import ErrorPage from './pages/ErrorPage.jsx'
-import App from './App.jsx'
+import HomePage from './Home.jsx'
 import './index.css'
-
-import {
-  createBrowserRouter,
-  RouterProvider
-} from 'react-router-dom'
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <HomePage />,
     errorElement: <ErrorPage />
   },
   {

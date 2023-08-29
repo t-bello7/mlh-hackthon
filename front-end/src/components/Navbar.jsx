@@ -1,11 +1,25 @@
 import React, { useState } from 'react'
 import { Link } from "react-router-dom";
+import Button from './atoms/Button';
+
+const navlinks = [
+  {
+    url: "/",
+    name: "home"
+  },
+  {
+    url: "/donations",
+    name: "donations"
+  },
+  {
+    url: "our-team",
+    name: "our team"
+  }
+]
 const Navbar = () => {
-    const [navOpen, setNavOpen] = useState(false);
-
-
+  const [navOpen, setNavOpen] = useState(false);
   return (
-    <div className="z-40 fixed p-4 flex justify-between bg-transparent md:bg-inherit items-center w-full md:justify-start md:gap-10 md:shadow-md">
+    <div className="p-4 flex justify-between bg-white dark:bg-darkColor md:bg-inherit items-center w-full md:justify-start md:gap-10 md:shadow-md">
       <div className="logo bg-transparent">
         <img
           src="https://png.pngtree.com/png-vector/20220630/ourmid/pngtree-foxy-logo-template-animal-animals-png-image_5611651.png"
@@ -21,24 +35,15 @@ const Navbar = () => {
         </div>
         <div className={navOpen? "h-fit p-5 shadow-md absolute top-0 left-0 w-full" : "hidden md:flex md:w-full md:justify-between"}>
           <ul className='h-fit md:flex md:gap-4'>
-            <li className='mb-2 pt-2 pb-2 uppercase hover:text-slate-300' >
-              <a href="">About the company</a>
-            </li>
-            <li className='mb-2 pt-2 pb-2 uppercase hover:text-slate-300'>
-              <Link to={"/dashboard"}>Dashboard</Link>
-            </li>
-            <li className='mb-2 pt-2 pb-2 uppercase hover:text-slate-300'>
-              <a href="">Analytics</a>
-            </li>
+            {
+              navlinks.map((item, index) => (
+              <li key={index} className='mb-2 pt-2 pb-2 uppercase hover:text-slate-300' >
+                < Link to={item.url}>{ item.name.charAt(0).toUpperCase() + item.name.toLowerCase().slice(1)}</Link>
+              </li>
+              ))
+            }
           </ul>
-          <div className="buttons flex gap-4 bg-inherit">
-            <button className="btn-secondary hover:bg-gray-800">
-              Sign in
-            </button>
-            <button className="btn-primary hover:bg-blue-300">
-              Registration
-            </button>
-          </div>
+          <Button name={"Donate Now"}/>
         </div>
       </div>
     </div>
