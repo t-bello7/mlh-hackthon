@@ -9,7 +9,9 @@ export default {
     colors: {
       'colorPrimary': '#14ad91',
       'secondaryColor': '#ba3033',
-      'darkColor': '#181818'
+      'darkColor': '#181818',
+      'white': '#ffffff',
+      'black': '#000000'
     },
     extend: {},
   },

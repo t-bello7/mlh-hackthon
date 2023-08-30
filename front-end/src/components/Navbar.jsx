@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
+import { gsap } from 'gsap';
 import Button from './atoms/Button';
 
+const glassStyle = "shadow-lg shadow-white-500/50 rounded bg-[#f6f0f066] backdrop-blur-sm"
 const navlinks = [
   {
     url: "/",
@@ -12,14 +14,24 @@ const navlinks = [
     name: "donations"
   },
   {
-    url: "our-team",
+    url: "#our-team",
     name: "our team"
   }
 ]
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
+  const navRef = useRef(null)
+
+  useEffect(() => {
+    gsap.from(navRef.current, {
+      duration:1,
+      // autoAlpha: 0,
+      ease: 'none',
+      delay: 1
+    })
+  }, [navRef])
   return (
-    <div className="p-4 flex justify-between bg-white dark:bg-darkColor md:bg-inherit items-center w-full md:justify-start md:gap-10 md:shadow-md">
+    <div ref={navRef} className={`${glassStyle} fixed container max-w-[80%] mt-[3vh] mx-auto left-[50%] translate-x-[-50%] flex center justify-between items-center md:justify-start md:gap-10`}>
       <div className="logo bg-transparent">
         <img
           src="https://png.pngtree.com/png-vector/20220630/ourmid/pngtree-foxy-logo-template-animal-animals-png-image_5611651.png"
@@ -29,9 +41,7 @@ const Navbar = () => {
       </div>
       <div className="navlinks flex items-center gap-12 md:w-full">
         <div className={"burger p-2 rounded-sm z-50 md:hidden"} onClick={()=>setNavOpen(!navOpen)}>
-            <div className="line w-6 h-1 bg-slate-100 m-1"></div>
-            <div className="line w-6 h-1 bg-slate-100 m-1"></div>
-            <div className="line w-6 h-1 bg-slate-100 m-1"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px" fill="#fff" ><path d="M 3 9 A 1.0001 1.0001 0 1 0 3 11 L 47 11 A 1.0001 1.0001 0 1 0 47 9 L 3 9 z M 3 24 A 1.0001 1.0001 0 1 0 3 26 L 47 26 A 1.0001 1.0001 0 1 0 47 24 L 3 24 z M 3 39 A 1.0001 1.0001 0 1 0 3 41 L 47 41 A 1.0001 1.0001 0 1 0 47 39 L 3 39 z"/></svg>
         </div>
         <div className={navOpen? "h-fit p-5 shadow-md absolute top-0 left-0 w-full" : "hidden md:flex md:w-full md:justify-between"}>
           <ul className='h-fit md:flex md:gap-4'>

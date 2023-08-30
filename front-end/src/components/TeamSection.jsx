@@ -9,7 +9,7 @@ const TeamMembers = [
 ]
 const TeamSection = () => {
     return (
-        <div>
+        <div className="container mx-auto ">
             {
                 TeamMembers.map((item) => {
                     const {img, name} = item

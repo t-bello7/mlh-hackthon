@@ -1,8 +1,9 @@
+import charityImg from "../../assets/imgs/charity.jpg"
 const JumbotronImage = () => {
     return (
-        <div>
+        <div className="hidden md:block">
             
-            image
+            <img src={charityImg} alt="charity-img" />
         </div>
     )
 }

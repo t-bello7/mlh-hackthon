@@ -3,7 +3,7 @@ import JumbotronTextSection from "./molecules/JumbotronTextSection";
 
 const Jumbotron = () => {
     return (
-        <div className="md:flex ">
+        <div className="container mx-auto md:flex pt-[12vh]">
             <JumbotronTextSection />
             <JumbotronImage />
         </div>

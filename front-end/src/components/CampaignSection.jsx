@@ -1,6 +1,6 @@
 const CampaignSection = () => {
     return (
-        <div>
+        <div className="container mx-auto">
             Campaign S3ecito
         </div>
     )
