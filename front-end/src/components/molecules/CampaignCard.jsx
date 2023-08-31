@@ -9,7 +9,7 @@ const CampaignCard = ({campaign}) => {
             targetAmount } = campaign
     let { pathname } = useLocation();
     return (
-        <div className={`text-white w-[85%] h-[29rem] py-[10vh] px-[3ch] shadow-md shadow-white space-y-2 md:grow-0 md:shrink-0 ${pathname == '/donation' ? 'md:w-[2rem]' : 'md:w-[800px]'}`}>
+        <div className={`text-white w-[85%] h-[29rem] py-[10vh] px-[3ch] shadow-md shadow-white space-y-2 ${pathname == '/donations' ? 'md:w-[30rem]' : 'md:w-[800px] md:grow-0 md:shrink-0'}`}>
             <div className="flex gap-5">
                 <div className="bg-secondaryColor w-fit text-sm p-1 rounded">{tag}</div>
                 <div className="w-full flex gap-1">

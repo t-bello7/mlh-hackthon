@@ -1,6 +1,5 @@
 import CampaignCard from './molecules/CampaignCard';
 
-
 const campaigns = [
   {
       id: '231#',
@@ -38,7 +37,7 @@ const campaigns = [
 
 const DontationSection = () => {
   return (
-    <div className="container mx-auto grid grid-cols-3">
+    <div className="container mx-auto grid lg:grid-cols-3">
       {
         campaigns.map(item => <CampaignCard key={item.id} campaign={item}/>)
       }
