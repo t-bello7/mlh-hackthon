@@ -7,11 +7,13 @@ export default {
   ],
   theme: {
     colors: {
-      'colorPrimary': '#14ad91',
+      'primaryColor': '#14ad91',
       'secondaryColor': '#ba3033',
+      'darkerColor': '#131313',
       'darkColor': '#181818',
       'white': '#ffffff',
-      'black': '#000000'
+      'black': '#000000',
+      'gray': '#808080'
     },
     extend: {},
   },

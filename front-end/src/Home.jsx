@@ -9,7 +9,7 @@ import Footer from './components/Footer'
 
 const HomePage = () =>{
   return (
-    <div className='relative bg-darkColor'>
+    <div className='relative bg-darkerColor text-lg'>
       <Navbar/>
       {/* <FrontPage/> */}
       <Jumbotron />

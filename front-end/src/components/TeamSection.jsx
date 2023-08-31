@@ -5,11 +5,23 @@ const TeamMembers = [
     {
         name: "Tomi Bello",
         img: tomiPic
-    }
+    },
+    {
+        name: "Tomi Bello",
+        img: tomiPic
+    }, 
+    {
+        name: "Tomi Bello",
+        img: tomiPic
+    },
+    {
+        name: "Tomi Bello",
+        img: tomiPic
+    },
 ]
 const TeamSection = () => {
     return (
-        <div className="container mx-auto ">
+        <div className="container mx-auto mb-[10vh] flex flex-col items-center md:flex-row gap-2">
             {
                 TeamMembers.map((item) => {
                     const {img, name} = item

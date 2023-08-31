@@ -31,7 +31,7 @@ const Navbar = () => {
     })
   }, [navRef])
   return (
-    <div ref={navRef} className={`${glassStyle} fixed container max-w-[80%] mt-[3vh] mx-auto left-[50%] translate-x-[-50%] flex center justify-between items-center md:justify-start md:gap-10`}>
+    <div ref={navRef} className={`${glassStyle} z-10 fixed container max-w-[80%] mt-[3vh] mx-auto left-[50%] translate-x-[-50%] flex center justify-between items-center md:justify-start md:gap-10`}>
       <div className="logo bg-transparent">
         <img
           src="https://png.pngtree.com/png-vector/20220630/ourmid/pngtree-foxy-logo-template-animal-animals-png-image_5611651.png"
