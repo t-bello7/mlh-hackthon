@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
 import { gsap } from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
 import Button from './atoms/Button';
 
 const glassStyle = "shadow-lg shadow-white-500/50 rounded bg-[#f6f0f066] backdrop-blur-sm"
@@ -13,15 +14,14 @@ const navlinks = [
     url: "/donations",
     name: "donations"
   },
-  {
-    url: "#our-team",
-    name: "our team"
-  }
 ]
-const Navbar = () => {
+const Navbar = ({teamSectionRef}) => {
   const [navOpen, setNavOpen] = useState(false);
   const navRef = useRef(null)
-
+  const handleScrollToTeam = () => {
+    gsap.registerPlugin(ScrollToPlugin)
+    gsap.to(window, {duration: 1, scrollTo: teamSectionRef.current});  
+  }
   useEffect(() => {
     gsap.from(navRef.current, {
       duration:1,
@@ -48,10 +48,11 @@ const Navbar = () => {
             {
               navlinks.map((item, index) => (
               <li key={index} className='mb-2 pt-2 pb-2 uppercase hover:text-slate-300' >
-                < Link to={item.url}>{ item.name.charAt(0).toUpperCase() + item.name.toLowerCase().slice(1)}</Link>
+                <Link to={item.url}>{ item.name.charAt(0).toUpperCase() + item.name.toLowerCase().slice(1)}</Link>
               </li>
               ))
             }
+            <li className='mb-2 pt-2 pb-2' onClick={handleScrollToTeam}> OUR TEAM </li>
           </ul>
           <Button name={"Donate Now"}/>
         </div>

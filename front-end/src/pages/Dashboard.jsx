@@ -1,3 +1,9 @@
-const DashBoard = () => (<div> Thi is the DashBoard </div>)
+import DontationSection from "../components/DonationSection";
+
+const DashBoard = () => (
+        <div className="bg-darkerColor">
+            <DontationSection />
+        </div>
+    )
 
 export default DashBoard;

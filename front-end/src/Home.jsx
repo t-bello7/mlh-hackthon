@@ -3,8 +3,6 @@ import useDimensions from 'react-use-dimensions'
 import useScreenDimensions from './components/hooks/useScreenDimensions'
 import { gsap } from 'gsap'
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
-// import About from './components/About'
-// import FrontPage from './components/FrontPage'
 import Navbar from './components/Navbar'
 import Jumbotron from './components/Jumbtron'
 import CampaignSection from './components/CampaignSection'
@@ -83,11 +81,9 @@ const HomePage = () => {
   },[currentSlide])
   return (
     <div ref={containerRef} className='relative bg-darkerColor text-lg overflow-scroll'>
-      <Navbar/>
-      {/* <FrontPage/> */}
+      <Navbar teamSectionRef={teamSectionRef} />
       <Jumbotron innerRef={jumbotronRef} />
       <CampaignSection innerRef={campaignSectionRef} />
-      {/* <About/> */}
       <TeamSection innerRef={teamSectionRef}/>
       <Footer />
     </div>
