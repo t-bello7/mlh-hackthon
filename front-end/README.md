@@ -14,3 +14,4 @@ Currently, two official plugins are available:
 https://www.youtube.com/watch?v=6lqCTyY-Rs8&list=PLkEZWD8wbltn-fdLYdB-oGEbvH5dEQdaG&index=2
 https://push.org/
 https://icons8.com/icon/set/time/material-outlined--static  
+-https://greensock.com/docs/v3/Eases

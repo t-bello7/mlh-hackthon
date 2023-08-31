@@ -19,14 +19,14 @@ const TeamMembers = [
         img: tomiPic
     },
 ]
-const TeamSection = () => {
+const TeamSection = ({innerRef}) => {
     return (
-        <div className="container mx-auto mb-[10vh] flex flex-col items-center md:flex-row gap-12">
+        <div ref={innerRef} className="container mx-auto mb-[10vh] flex flex-col items-center md:flex-row gap-12 md:overflow-scroll">
             {
-                TeamMembers.map((item) => {
+                TeamMembers.map((item, index) => {
                     const {img, name} = item
                     return (
-                        <TeamCard imgUrl={img} name={name} />
+                        <TeamCard key={index} imgUrl={img} name={name} />
                     )
                 })
             }

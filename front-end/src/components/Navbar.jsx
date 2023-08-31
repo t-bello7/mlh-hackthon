@@ -25,9 +25,9 @@ const Navbar = () => {
   useEffect(() => {
     gsap.from(navRef.current, {
       duration:1,
-      // autoAlpha: 0,
-      ease: 'none',
-      delay: 1
+      // opacity:2.5,
+      scale: 0.8,
+      ease: "back"
     })
   }, [navRef])
   return (

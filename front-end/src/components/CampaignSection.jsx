@@ -35,9 +35,9 @@ const campaigns = [
     },
 ]
 
-const CampaignSection = () => {
+const CampaignSection = ({innerRef}) => {
     return (
-        <div className="container mx-auto mb-[10vh] flex flex-col items-center gap-12 md:flex-row">
+        <div ref={innerRef} className="container mx-auto mb-[10vh] flex flex-col items-center gap-12 md:flex-row md:overflow-scroll">
             {
                 campaigns.map(item => <CampaignCard key={item.id} campaign={item}/>)
             }
