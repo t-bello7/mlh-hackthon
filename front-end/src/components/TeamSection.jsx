@@ -21,7 +21,7 @@ const TeamMembers = [
 ]
 const TeamSection = () => {
     return (
-        <div className="container mx-auto mb-[10vh] flex flex-col items-center md:flex-row gap-2">
+        <div className="container mx-auto mb-[10vh] flex flex-col items-center md:flex-row gap-12">
             {
                 TeamMembers.map((item) => {
                     const {img, name} = item

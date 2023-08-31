@@ -7,7 +7,7 @@ const CampaignCard = ({campaign}) => {
             raisedAmount,
             targetAmount } = campaign
     return (
-        <div className="text-white w-[85%] h-[29rem] py-[10vh] px-[3ch] shadow-md shadow-white space-y-2">
+        <div className="text-white w-[85%] h-[29rem] py-[10vh] px-[3ch] shadow-md shadow-white space-y-2 md:grow-0 md:shrink-0 md:w-[800px]">
             <div className="flex gap-5">
                 <div className="bg-secondaryColor w-fit text-sm p-1 rounded">{tag}</div>
                 <div className="w-full flex gap-1">

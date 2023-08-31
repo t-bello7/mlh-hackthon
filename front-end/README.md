@@ -13,3 +13,4 @@ Currently, two official plugins are available:
 - https://greensock.com/forums/topic/20139-scroll-to-div-on-mouse-scroll-updown/
 https://www.youtube.com/watch?v=6lqCTyY-Rs8&list=PLkEZWD8wbltn-fdLYdB-oGEbvH5dEQdaG&index=2
 https://push.org/
+https://icons8.com/icon/set/time/material-outlined--static  
