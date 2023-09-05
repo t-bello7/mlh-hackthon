@@ -1,5 +1,4 @@
 import { useRef, useEffect, useState } from 'react'
-import useDimensions from 'react-use-dimensions'
 import useScreenDimensions from './components/hooks/useScreenDimensions'
 import { gsap } from 'gsap'
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
